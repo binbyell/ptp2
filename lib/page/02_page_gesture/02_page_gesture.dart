@@ -13,6 +13,7 @@ class PageGesture extends StatefulWidget {
 
 class PageGestureState extends State<PageGesture> {
 
+  List<int> tempList = [1, 2, 3];
 
   @override
   Widget build(BuildContext context) {
@@ -27,16 +28,40 @@ class PageGestureState extends State<PageGesture> {
       appBar: AppBar(
         title: const Text("PageGesture"),
       ),
+      // body: ListView.separated(
+      //   itemCount: notifierSetting.tempList.length,
+      //     itemBuilder: (context, index){
+      //       return SlideRemove(
+      //         width: deviceWidth,
+      //         height: 100,
+      //         backgroundDecoration: const BoxDecoration(color: Colors.transparent),
+      //         itemWidget: Center(child: Text("${notifierSetting.tempList[index]}"),),
+      //       );
+      //     },
+      //   separatorBuilder: (BuildContext context, int index) { return const Divider(); },
+      // ),
+
       body: ListView.separated(
-        itemCount: notifierSetting.tempList.length,
-          itemBuilder: (context, index){
-            return SlideRemove(
-              width: deviceWidth,
-              height: 100,
-              backgroundDecoration: const BoxDecoration(color: Colors.transparent),
-              itemWidget: Center(child: Text("${notifierSetting.tempList[index]}"),),
-            );
-          },
+        itemCount: tempList.length,
+
+        itemBuilder: (context, index){
+          return InkWell(
+            onTap: (){
+              setState(() {
+                tempList.insert(index, index+1);
+              });
+            },
+            onLongPress: (){
+              setState(() {
+                tempList.removeAt(index);
+              });
+            },
+            child: Card(
+              color: Colors.amber,
+              child: Center(child: Text('${tempList[index]}')),
+            ),
+          );
+        },
         separatorBuilder: (BuildContext context, int index) { return const Divider(); },
       ),
       /*

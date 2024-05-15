@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ptp_v2/list.dart';
+import 'package:ptp_v2/notifier/02_03_notifier_listControl.dart';
 import 'package:ptp_v2/notifier/02_notifier_gesture.dart';
 import 'package:ptp_v2/notifier/01_notifier_setting.dart';
 
@@ -17,6 +18,7 @@ class StartApp extends StatelessWidget{
       providers: [
         ChangeNotifierProvider(create: (_) => NotifierSetting()),
         ChangeNotifierProvider(create: (_) => NotifierGesture()),
+        ChangeNotifierProvider(create: (_) => NotifierListControl()),
       ],
       child: const MyApp(),
     );

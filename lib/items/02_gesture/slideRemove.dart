@@ -33,6 +33,7 @@ class _SlideRemoveState extends State<SlideRemove> {
       onHorizontalDragEnd: (s){
         if(s.primaryVelocity == null){
           return;
+          
         }
         if(nowOnMove == false){
           return;

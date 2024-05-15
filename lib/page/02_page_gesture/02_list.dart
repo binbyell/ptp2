@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ptp_v2/page/02_page_gesture/02_page_gesture.dart';
+import 'package:ptp_v2/page/02_page_gesture/02_page_movecontainer.dart';
 import 'package:ptp_v2/page/02_page_gesture/02_page_showPoint.dart';
 
 class PageGestureList extends StatelessWidget{
@@ -25,6 +26,12 @@ class PageGestureList extends StatelessWidget{
                     child: const Text("gesture list"),
                     onPressed:(){
                       Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const PageGesture()));
+                    }
+                ),
+                OutlinedButton(
+                    child: const Text("PageMoveContainer"),
+                    onPressed:(){
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const PageMoveContainer()));
                     }
                 ),
               ],
