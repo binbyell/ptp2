@@ -13,6 +13,9 @@ class PageGesture extends StatefulWidget {
 
 class PageGestureState extends State<PageGesture> {
 
+  //
+
+  TextEditingController textEditingController = TextEditingController();
   List<int> tempList = [1, 2, 3];
 
   @override

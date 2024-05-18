@@ -23,12 +23,6 @@ class PageGestureList extends StatelessWidget{
                     }
                 ),
                 OutlinedButton(
-                    child: const Text("gesture list"),
-                    onPressed:(){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const PageGesture()));
-                    }
-                ),
-                OutlinedButton(
                     child: const Text("PageMoveContainer"),
                     onPressed:(){
                       Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const PageMoveContainer()));

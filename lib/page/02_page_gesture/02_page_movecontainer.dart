@@ -79,7 +79,7 @@ class PageMoveContainerState extends State<PageMoveContainer> {
                     ),
                   ),
                   AnimatedContainer(
-                    key: Provider.of<NotifierListControl>(context, listen: false).listKey,
+                      key: Provider.of<NotifierListControl>(context, listen: false).listKeyForMove,
                     width: notifierListControl.listColors.isEmpty?0:deviceWidth/2,
                     height: deviceHeight * 0.6,
                     duration: Provider.of<NotifierListControl>(context, listen: false).duration,
@@ -90,8 +90,14 @@ class PageMoveContainerState extends State<PageMoveContainer> {
                             scrollDirection: Axis.vertical,
                             child: Column(
                               children: [
+                                SizedBox(
+                                  key: Provider.of<NotifierListControl>(context, listen: false).listKeyForIndex,
+                                  width: double.infinity,
+                                  height: 0,
+                                ),
                                 for(int index = 0; index<notifierListControl.listColors.length; index++)
-                                  MoveAbleListItem(index: index,),
+                                  MoveAbleListItem(
+                                    index: index,),
                               ],
                             ),
                           ),

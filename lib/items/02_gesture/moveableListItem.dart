@@ -26,8 +26,11 @@ class MoveAbleListItemState extends State<MoveAbleListItem> {
     NotifierListControl notifierListControl = Provider.of<NotifierListControl>(context);
 
     // get parents position
-    RenderBox parentsRenderBox = Provider.of<NotifierListControl>(context, listen: false).listKey.currentContext!.findRenderObject() as RenderBox;
+    RenderBox parentsRenderBox = Provider.of<NotifierListControl>(context, listen: false).listKeyForIndex.currentContext!.findRenderObject() as RenderBox;
     Offset parentsZeroGlobalPosition = parentsRenderBox.localToGlobal(Offset.zero);
+
+    RenderBox parentsRenderBoxForMove = Provider.of<NotifierListControl>(context, listen: false).listKeyForMove.currentContext!.findRenderObject() as RenderBox;
+    Offset parentsZeroGlobalPositionForMove = parentsRenderBoxForMove.localToGlobal(Offset.zero);
 
     return GestureDetector(
       onLongPressStart: (detail){
@@ -44,8 +47,8 @@ class MoveAbleListItemState extends State<MoveAbleListItem> {
         );
         notifierListControl.setOnListMoveObjectOffset(
             Offset(
-                detail.globalPosition.dx - parentsZeroGlobalPosition.dx - ((notifierListControl.listColors.isEmpty?0:deviceWidth/2)/2),
-                detail.globalPosition.dy - parentsZeroGlobalPosition.dy - (50/2)
+                detail.globalPosition.dx - parentsZeroGlobalPositionForMove.dx - ((notifierListControl.listColors.isEmpty?0:deviceWidth/2)/2),
+                detail.globalPosition.dy - parentsZeroGlobalPositionForMove.dy - (50/2)
             )
         );
 
@@ -58,8 +61,8 @@ class MoveAbleListItemState extends State<MoveAbleListItem> {
       onLongPressMoveUpdate: (detail){
         notifierListControl.setOnListMoveObjectOffset(
             Offset(
-                detail.globalPosition.dx - parentsZeroGlobalPosition.dx - ((notifierListControl.listColors.isEmpty?0:deviceWidth/2)/2),
-                detail.globalPosition.dy - parentsZeroGlobalPosition.dy - (50/2)
+                detail.globalPosition.dx - parentsZeroGlobalPositionForMove.dx - ((notifierListControl.listColors.isEmpty?0:deviceWidth/2)/2),
+                detail.globalPosition.dy - parentsZeroGlobalPositionForMove.dy - (50/2)
             )
         );
       },

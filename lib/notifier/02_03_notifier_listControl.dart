@@ -1,11 +1,13 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class NotifierListControl extends ChangeNotifier{
 
   /// key
-  GlobalKey listKey = GlobalKey();
+  GlobalKey listKeyForIndex = GlobalKey();
+  GlobalKey listKeyForMove = GlobalKey();
 
   /// value
   int _itemCount = 0;
