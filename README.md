@@ -1,16 +1,2 @@
-# ptp_v2
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# 이용자가 수정할 수 있는 리스트
+![moveAbleList 03](https://github.com/binbyell/ptp2/assets/101085803/e58550c4-227c-4421-ac30-c76da3424825)
