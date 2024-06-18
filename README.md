@@ -11,6 +11,20 @@
 애니메이션 잘 만들어 두면
 그냥 멋있죠.
 
+# Bling
+-(https://github.com/dyns4360/bling)
+- 코드 private 상태입니다. 관심있으시면 연락주세요.
+
+마켓 링크
+[웹_01](https://blingapp.link/)
+[웹_02](https://dyns4360.github.io/)
+[안드로이드](https://play.google.com/store/apps/details?id=com.dynetworks.bling)
+[ios](https://apps.apple.com/kr/app/%EB%B8%94%EB%A7%81-bling/id6469025965)
+
+
+
+
+  
 
 # 이용자가 수정할 수 있는 리스트
 ![moveAbleList 03](https://github.com/binbyell/ptp2/assets/101085803/e58550c4-227c-4421-ac30-c76da3424825)
