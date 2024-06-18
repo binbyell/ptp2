@@ -115,9 +115,15 @@ flutter의 window 빌드 기능을 통해 별도로 구현하였습니다.
 # 이용자가 수정할 수 있는 리스트
 ![moveAbleList 03](https://github.com/binbyell/ptp2/assets/101085803/e58550c4-227c-4421-ac30-c76da3424825)
 
+이용자가 수정할 수 있는 리스트를 목표로 제작하였습니다.
+유저의 터치 좌표와, 리스트 위젯의 각 아이템 위치 좌표를 파악 후 리스트의 값 변경을 구현했습니다.
+
+
 # Matrix4, InteractiveViewer 활용
 - (https://github.com/binbyell/seomjae_assignment)
 - 코드 private 상태입니다. 관심있으시면 연락주세요.
 
 ![ptp2](https://github.com/binbyell/ptp2/assets/101085803/f4811528-764a-493c-b51e-22b6657104a3)
+
+Matrix4, InteractiveViewer 활용하여, 에니메이션 구현을 목표로 제작하였습니다.
 
